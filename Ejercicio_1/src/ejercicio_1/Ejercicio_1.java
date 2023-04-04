@@ -48,7 +48,6 @@ public class Ejercicio_1 {
             switch (menu.getResultado()) {
                 case 1:// Cargar Cuenta
                     cuenta= scb.crearCuenta();
-                    menu.esperaTecla();
                     break;
                 case 2:// Ingresar Dinero
                     System.out.print("Ingrese el monto a depositar: ");

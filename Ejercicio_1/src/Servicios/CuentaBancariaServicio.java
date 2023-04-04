@@ -79,8 +79,8 @@ public class CuentaBancariaServicio {
         }else {
             cuenta.setSaldoActual(cuenta.getSaldoActual()-monto);
             System.out.println("El cliente retira $ "+ monto+".");
-            System.out.println("El saldo en cuents es de $ "+cuenta.getSaldoActual()+".");
-        }        
+        }
+        System.out.println("El saldo en cuenta es de $ "+cuenta.getSaldoActual()+".");
     }
     
     /**
@@ -105,6 +105,7 @@ public class CuentaBancariaServicio {
             System.out.println("El cliente solo puede retirar $"+ maximo+", correspondiente al 20% del saldo.");
             cuenta.setSaldoActual(cuenta.getSaldoActual()-maximo);
         }
+        System.out.println("El saldo en cuenta es de $ "+cuenta.getSaldoActual()+".");
     }
     
     /**

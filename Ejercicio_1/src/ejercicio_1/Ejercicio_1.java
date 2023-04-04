@@ -42,8 +42,12 @@ public class Ejercicio_1 {
         
         do {
             System.out.println( menu.toString());
-            if (menu.pregunta()!=1 && cuenta == null) {
+            menu.pregunta();
+           
+            
+            if ((menu.getResultado()!=1 && menu.getResultado()!=7)&& cuenta == null) {
                 System.out.println("Primero debe crear la cuenta.");
+                menu.esperaTecla();
             } else {
             switch (menu.getResultado()) {
                 case 1:// Cargar Cuenta
@@ -81,5 +85,7 @@ public class Ejercicio_1 {
         } while (salida);
         
     }
-    
+    private boolean inicializado(CuentaBancaria cuenta){
+        return cuenta!=null;
+    }
 }

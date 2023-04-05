@@ -53,7 +53,6 @@ public class Ejercicio_3 {
         Persona personas[] = {null, null, null, null};
         int[] IMCs = new int[3];
         int mayores = 0;
-        Menu.esperaTecla();
         for (Persona persona : personas) {
             persona = sp.crearPersona();
             if (sp.esMayorDeEdad(persona)) {

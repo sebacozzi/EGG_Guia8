@@ -73,7 +73,6 @@ public class PersonaServicio {
         nombre = leer.next();
         System.out.print("Ingrese la edad: ");
         edad = leer.nextInt();
-
         do {
             salida = false;
             System.out.print("Ingrese el sexo (H,M,O): ");

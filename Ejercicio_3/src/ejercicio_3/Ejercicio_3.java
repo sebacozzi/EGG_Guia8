@@ -53,12 +53,12 @@ public class Ejercicio_3 {
         Persona personas[] = {null, null, null, null};
         int[] IMCs = new int[3];
         int mayores = 0;
-        for (Persona persona : personas) {
-            persona = sp.crearPersona();
-            if (sp.esMayorDeEdad(persona)) {
+        for (int i=0;i< personas.length;i++) {
+            personas[i] = sp.crearPersona();
+            if (sp.esMayorDeEdad(personas[i])) {
                 mayores++;
             }
-            IMCs[sp.calcularIMC(persona) + 1]++;
+            IMCs[sp.calcularIMC(personas[i]) + 1]++;
             Menu.cls();
         }
         int cont = personas.length;

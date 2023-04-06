@@ -24,6 +24,7 @@
 package extra_1;
 
 import Entidad.Raices;
+import Servicios.RaicesServicio;
 
 /**
  *
@@ -36,8 +37,11 @@ public class Extra_1 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Raices ra= new Raices(4,5,6);
+        Raices ra= new Raices(3,5,1);
+        RaicesServicio rs= new RaicesServicio();
         System.out.println(ra);
+        rs.calcular(ra);
+        
     }
     
 }

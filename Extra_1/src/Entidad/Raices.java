@@ -28,38 +28,38 @@ package Entidad;
  * @author Sebastián Cozzi
  */
 public class Raices {
-    private double a;
-    private double b;
-    private double c;
+    private int a;
+    private int b;
+    private int c;
 
     public Raices() {
     }
 
-    public double getA() {
+    public int getA() {
         return a;
     }
 
-    public void setA(double a) {
+    public void setA(int a) {
         this.a = a;
     }
 
-    public double getB() {
+    public int getB() {
         return b;
     }
 
-    public void setB(double b) {
+    public void setB(int b) {
         this.b = b;
     }
 
-    public double getC() {
+    public int getC() {
         return c;
     }
 
-    public void setC(double c) {
+    public void setC(int c) {
         this.c = c;
     }
 
-    public Raices(double a, double b, double c) {
+    public Raices(int a, int b, int c) {
         this.a = a;
         this.b = b;
         this.c = c;
@@ -67,7 +67,7 @@ public class Raices {
 
     @Override
     public String toString() {
-        return "Raices{ Ecuación: %.2f*X^2 + %.2f*X + %.2f.".formatted(a,b,c)+ '}';
+        return "Raices{ Ecuación: %d*X^2 + %d*X + %d.".formatted(a,b,c)+ '}';
     }
     
 }

@@ -25,11 +25,15 @@ package Entidad;
 public class NIF {
     private long dni;
     private char letra;
-
+    private char[] letras;
     public NIF() {
+        this.dni=0;
+        this.letra=' ';
+        this.letras = new char[]{'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'};
     }
 
     public NIF(long dni, char letra) {
+        this.letras = new char[]{'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'};
         this.dni = dni;
         this.letra = letra;
     }
@@ -40,14 +44,15 @@ public class NIF {
 
     public void setDni(long dni) {
         this.dni = dni;
+        this.letra=letras[(int) (this.dni % 23)];
     }
 
     public char getLetra() {
         return letra;
     }
 
-    public void setLetra(char letra) {
-        this.letra = letra;
+    public char getLetras(int index) {
+        return letras[index];
     }
 
     @Override

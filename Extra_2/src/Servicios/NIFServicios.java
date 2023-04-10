@@ -30,14 +30,11 @@ public class NIFServicios {
             Scanner leer = new Scanner(System.in).useDelimiter("\n");
     
     public NIF CrearNif(){
-        long dni;
-        char letra;
+        NIF nif = new NIF();
         System.out.print("Ingrese el DNI: ");
-        dni=leer.nextLong();
+        nif.setDni(leer.nextLong());
         System.out.println("Calculando NIF.");
-        int id = (int)(dni % 23);
-        letra="TRWAGMYFPDXBNJZSQVHLCKE".charAt(id);
-        return new NIF(dni,letra);
+        return nif;
     }
      public void mostrar(NIF nif){
          System.out.println("---------------");

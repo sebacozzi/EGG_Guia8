@@ -24,13 +24,15 @@
 package Servicios;
 
 import Entidad.Raices;
+import java.util.Scanner;
 
 /**
  *
  * @author Sebastián Cozzi
  */
 public class RaicesServicio {
-
+    Scanner leer = new Scanner(System.in);
+    
     /**
      * a) Método getDiscriminante(): devuelve el valor del discriminante
      * (double).El discriminante tiene la siguiente fórmula: (b^2)-4*a*c
@@ -39,7 +41,7 @@ public class RaicesServicio {
      * @return
      */
     public double getDiscriminante(Raices raices) {
-        return (Math.pow(raices.getB(), 2) - 4 * raices.getA() * raices.getC());
+        return Math.pow(raices.getB(), 2) - 4 * raices.getA() * raices.getC();
     }
 
     /**
@@ -114,5 +116,15 @@ public class RaicesServicio {
             System.out.println("No tiene raices.");
         }
 
+    }
+    public void iniciaRaices(Raices raices){
+        
+        System.out.print("Ingrese el valor de a: ");
+        raices.setA(leer.nextInt());
+        System.out.print("Ingrese el valor de b: ");
+        raices.setB(leer.nextInt());
+        System.out.print("Ingrese el valor de c: ");
+        raices.setC(leer.nextInt());
+        
     }
 }

@@ -26,6 +26,7 @@ public class NIF {
     private long dni;
     private char letra;
     private char[] letras;
+    
     public NIF() {
         this.dni=0;
         this.letra=' ';
@@ -33,7 +34,7 @@ public class NIF {
     }
 
     public NIF(long dni, char letra) {
-        this.letras = new char[]{'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'};
+        this.letras = creaLetras();
         this.dni = dni;
         this.letra = letra;
     }
@@ -58,6 +59,14 @@ public class NIF {
     @Override
     public String toString() {
         return "NIF= " + dni + "-" + letra;
+    }
+    private char[] creaLetras(){
+      String ls= "TRWAGMYFPDXBNJZSQVHLCKE";
+      char[] l = new char[ls.length()];
+        for (int i = 0; i < ls.length(); i++) {
+            l[i]= ls.charAt(i);            
+        }
+        return l;
     }
     
 }

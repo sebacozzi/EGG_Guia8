@@ -25,6 +25,7 @@ package extra_1;
 
 import Entidad.Raices;
 import Servicios.RaicesServicio;
+import java.util.Scanner;
 
 /**
  *
@@ -37,10 +38,16 @@ public class Extra_1 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Raices ra= new Raices(3,5,1);
+        Scanner leer = new Scanner(System.in);
+        Raices ra= new Raices(3,5,0);
         RaicesServicio rs= new RaicesServicio();
+        do{
+            rs.iniciaRaices(ra);
         System.out.println(ra);
+        
         rs.calcular(ra);
+            System.out.println("Salir?");
+        }while (leer.next().equalsIgnoreCase("n"));
         
     }
     

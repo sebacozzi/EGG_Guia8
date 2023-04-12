@@ -40,6 +40,9 @@
  */
 package extra_3_propio;
 
+import Servicios.ServiciosMenu;
+import Utilidades.Menu;
+
 /**
  *
  * @author Sebastián Cozzi
@@ -51,6 +54,12 @@ public class Extra_3_propio {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        String[] ops={"Opcion 1", "Opcion 2", "Opcion 3", "Opcion 4", "Opcion 5", "Opcion 6"};
+        String[] op={"Opcion 1", "Opcion 2", "Opcion 3"};
+        Menu menu = new Menu(ops, "Menu de opciones");
+        ServiciosMenu sm=new ServiciosMenu(); 
+        sm.show(new Menu(op,"menu 2"));
+               
     }
     
 }
